@@ -37,4 +37,10 @@ public class StatsController {
     public List<Stats> getStatsBySocialLink(@PathVariable Long linkId) {
         return statsRepository.findBySocialLinkId(linkId);
     }
+
+
+    //GET /api/stats - get all stats
+    //GET /api/stats/{id} - get statistics by ID
+    //POST /api/stats - create stats
+    //GET /api/stats/social-link/{linkId} - get stats by the link
 }
