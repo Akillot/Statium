@@ -1,7 +1,7 @@
 package org.projects.statx.controllers;
 
-import org.projects.statx.entity.SocialLink;
-import org.projects.statx.repository.SocialLinkRepository;
+import org.projects.statx.entities.SocialLink;
+import org.projects.statx.repositories.SocialLinkRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

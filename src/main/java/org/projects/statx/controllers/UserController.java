@@ -1,7 +1,7 @@
 package org.projects.statx.controllers;
 
-import org.projects.statx.entity.User;
-import org.projects.statx.repository.UserRepository;
+import org.projects.statx.entities.User;
+import org.projects.statx.repositories.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

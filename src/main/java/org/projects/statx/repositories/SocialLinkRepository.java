@@ -1,6 +1,6 @@
-package org.projects.statx.repository;
+package org.projects.statx.repositories;
 
-import org.projects.statx.entity.SocialLink;
+import org.projects.statx.entities.SocialLink;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
