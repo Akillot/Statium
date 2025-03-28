@@ -8,6 +8,7 @@ import java.util.List;
 
 @Service
 public class SocialLinkService {
+
     private final SocialLinkRepository socialLinkRepository;
 
     public SocialLinkService(SocialLinkRepository socialLinkRepository) {

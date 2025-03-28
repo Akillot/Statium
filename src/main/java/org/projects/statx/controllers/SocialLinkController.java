@@ -13,24 +13,22 @@ import java.util.List;
 @RequestMapping("/api/social-links")
 @Slf4j
 public class SocialLinkController {
+
     private final SocialLinkService socialLinkService;
 
     public SocialLinkController(SocialLinkService socialLinkService) {
         this.socialLinkService = socialLinkService;
     }
 
-    // Getting links from user
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<SocialLink>> getLinksByUserId(@PathVariable Long userId) {
         log.info("Запрос на получение ссылок пользователя с ID: {}", userId);
         List<SocialLink> links = socialLinkService.getLinksByUserId(userId);
-        if (links.isEmpty()) {
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(links);
+        return links.isEmpty()
+                ? ResponseEntity.notFound().build()
+                : ResponseEntity.ok(links);
     }
 
-    // Creating new link
     @PostMapping
     public ResponseEntity<SocialLink> createSocialLink(@Valid @RequestBody SocialLink socialLink) {
         log.info("Создание новой ссылки: {}", socialLink);
