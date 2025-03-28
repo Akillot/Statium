@@ -1,43 +1,40 @@
 package org.projects.statx.controllers;
 
+import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.projects.statx.entities.SocialLink;
-import org.projects.statx.repositories.SocialLinkRepository;
+import org.projects.statx.services.SocialLinkService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
-@Controller
+@RestController
 @RequestMapping("/api/social-links")
+@Slf4j
 public class SocialLinkController {
+    private final SocialLinkService socialLinkService;
 
-    private final SocialLinkRepository socialLinkRepository;
-
-    public SocialLinkController(SocialLinkRepository socialLinkRepository) {
-        this.socialLinkRepository = socialLinkRepository;
+    public SocialLinkController(SocialLinkService socialLinkService) {
+        this.socialLinkService = socialLinkService;
     }
 
-    @GetMapping
-    public List<SocialLink> getSocialLinks() {
-        return socialLinkRepository.findAll();
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<SocialLink> getLinkById(@PathVariable Long id) {
-        Optional<SocialLink> link = socialLinkRepository.findById(id);
-        return link.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
-    }
-
-    @PostMapping
-    public SocialLink createLink(@RequestBody SocialLink socialLink) {
-        return socialLinkRepository.save(socialLink);
-    }
-
+    // Getting links from user
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<SocialLink>> getLinksByUserId(@PathVariable Long userId) {
-        List<SocialLink> links = socialLinkRepository.findByUserId(userId);
+        log.info("Запрос на получение ссылок пользователя с ID: {}", userId);
+        List<SocialLink> links = socialLinkService.getLinksByUserId(userId);
+        if (links.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
         return ResponseEntity.ok(links);
+    }
+
+    // Creating new link
+    @PostMapping
+    public ResponseEntity<SocialLink> createSocialLink(@Valid @RequestBody SocialLink socialLink) {
+        log.info("Создание новой ссылки: {}", socialLink);
+        SocialLink savedLink = socialLinkService.createSocialLink(socialLink);
+        return ResponseEntity.ok(savedLink);
     }
 }
