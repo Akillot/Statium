@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface StatsRepository extends JpaRepository<Stats, Long> {
-    List<Stats> findBySocialLinkId(Long linkId);
+    List<Stats> findBySocialLink_LinkId(Long linkId);
 }
