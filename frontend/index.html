@@ -1,33 +1,54 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STAT-X | Analytics Platform</title>
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <link rel="icon" href="assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Faustina:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+<div class="app-container">
+  <header class="global-nav">
+    <div class="nav-brand">
+      <span class="logo">STAT-X</span>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Analytics</a></li>
+        <li><a href="#">Reports</a></li>
+      </ul>
+    </nav>
+    <div class="user-controls">
+      <button class="icon-btn"><i class="fas fa-search"></i></button>
+      <button class="icon-btn"><i class="fas fa-bell"></i></button>
+    </div>
+  </header>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+  <main class="content-area">
+    <section class="hero-panel">
+      <h1>Performance Overview</h1>
+      <div class="metric-cards">
+        <div class="card">
+          <h3>Engagement</h3>
+          <p class="value">24.7%</p>
+        </div>
+        <div class="card">
+          <h3>New Users</h3>
+          <p class="value">1,248</p>
+        </div>
+      </div>
+    </section>
 
+    <section class="data-viz">
+      <div class="chart-container">
+        <h2>Growth Metrics</h2>
+        <div class="chart-placeholder"></div>
+      </div>
+    </section>
+  </main>
+</div>
 </body>
-
 </html>
