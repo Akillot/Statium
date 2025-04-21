@@ -1,8 +1,8 @@
-package org.projects.statx.controllers;
+package org.projects.statium.controllers;
 
 import jakarta.validation.Valid;
-import org.projects.statx.entities.SocialLink;
-import org.projects.statx.services.SocialLinkService;
+import org.projects.statium.entities.SocialLink;
+import org.projects.statium.services.SocialLinkService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,7 @@
-package org.projects.statx.controllers;
+package org.projects.statium.controllers;
 
-import org.projects.statx.entities.Stats;
-import org.projects.statx.services.StatsService;
+import org.projects.statium.entities.Stats;
+import org.projects.statium.services.StatsService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

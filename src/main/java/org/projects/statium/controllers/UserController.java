@@ -1,7 +1,7 @@
-package org.projects.statx.controllers;
+package org.projects.statium.controllers;
 
-import org.projects.statx.entities.User;
-import org.projects.statx.services.UserService;
+import org.projects.statium.entities.User;
+import org.projects.statium.services.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

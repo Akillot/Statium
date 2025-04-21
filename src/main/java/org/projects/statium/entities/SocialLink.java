@@ -1,4 +1,4 @@
-package org.projects.statx.entities;
+package org.projects.statium.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

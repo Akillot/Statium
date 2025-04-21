@@ -1,12 +1,12 @@
-package org.projects.statx;
+package org.projects.statium;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StatXApplication {
+public class StatiumApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StatXApplication.class, args);
+        SpringApplication.run(StatiumApplication.class, args);
     }
 }

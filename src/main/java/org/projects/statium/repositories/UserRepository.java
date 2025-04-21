@@ -1,6 +1,6 @@
-package org.projects.statx.repositories;
+package org.projects.statium.repositories;
 
-import org.projects.statx.entities.User;
+import org.projects.statium.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

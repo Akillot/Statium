@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.projects</groupId>
-    <artifactId>Stat-X</artifactId>
+    <artifactId>Statium</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Stat-X</name>
-    <description>Stat-X</description>
+    <name>Statium</name>
+    <description>Statium</description>
     <properties>
         <java.version>17</java.version>
     </properties>

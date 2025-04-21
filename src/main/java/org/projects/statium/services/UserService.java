@@ -1,7 +1,7 @@
-package org.projects.statx.services;
+package org.projects.statium.services;
 
-import org.projects.statx.entities.User;
-import org.projects.statx.repositories.UserRepository;
+import org.projects.statium.entities.User;
+import org.projects.statium.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

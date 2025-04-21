@@ -1,7 +1,7 @@
-package org.projects.statx.services;
+package org.projects.statium.services;
 
-import org.projects.statx.entities.SocialLink;
-import org.projects.statx.repositories.SocialLinkRepository;
+import org.projects.statium.entities.SocialLink;
+import org.projects.statium.repositories.SocialLinkRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,7 +1,7 @@
-package org.projects.statx.services;
+package org.projects.statium.services;
 
-import org.projects.statx.entities.Stats;
-import org.projects.statx.repositories.StatsRepository;
+import org.projects.statium.entities.Stats;
+import org.projects.statium.repositories.StatsRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
