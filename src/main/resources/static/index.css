@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Unbounded:wght@700&display=swap');
+
+:root {
+  --bg-color: #f5f5f7;
+  --card-bg: #ffffffcc;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --text-primary: #1d1d1f;
+  --accent: #838383;
+  --transition: 0.2s ease;
+}
+
+body {
+  font-family: 'Unbounded', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 2.5rem); }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+.global-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: color var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color var(--transition);
+}
+
+.icon-btn:hover {
+  color: var(--accent);
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hero-panel {
+  padding: 3.75rem 2.5rem 2.5rem;
+}
+
+.data-viz {
+  padding: 0 2.5rem 3.75rem;
+}
+
+.chart-placeholder {
+  height: 20rem;
+  background: linear-gradient(135deg, #f5f5f7 0%, #eaeaea 100%);
+  border-radius: 0.75rem;
+  margin-top: 1.5rem;
+
+}
+
+@media (max-width: 768px) {
+  .global-nav {
+    padding: 1rem;
+  }
+
+  .hero-panel {
+    padding: 2rem 1rem;
+  }
+
+  .data-viz {
+    padding: 0 1rem 2rem;
+  }
+}
